@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Okubazgi - Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Nathan Okubazgi" class="profile-pic">
+                </div>
+                <div class="typing-text">
+                    <h1>Hi, I'm <span class="highlight">Nathan Okubazgi</span></h1>
+                    <div id="typed-strings">
+                        <p>Software Engineer</p>
+                        <p>Problem Solver</p>
+                        <p>Tech Enthusiast</p>
+                    </div>
+                    <span id="typed"></span>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="scroll-reveal">
+            <h2>About Me</h2>
+            <div class="card">
+                <div class="tech-image parallax">
+                    <img src="images/tech1.jpg" alt="Tech Background">
+                </div>
+                <p>I am a passionate software engineer with expertise in building scalable applications. I enjoy tackling complex problems and turning them into simple, elegant solutions.</p>
+                <p>Currently working on exciting projects at Amazon, where I contribute to developing robust and efficient systems.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="scroll-reveal">
+            <h2>Skills</h2>
+            <div class="tech-image parallax">
+                <img src="images/tech2.jpg" alt="Technology Skills">
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;" data-level="90">
+                            <span>JavaScript/TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;" data-level="85">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;" data-level="80">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Technologies</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;" data-level="95">
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 88%;" data-level="88">
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;" data-level="85">
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="scroll-reveal">
+            <h2>Projects</h2>
+            <div class="tech-image parallax">
+                <img src="images/tech3.jpg" alt="Project Technology">
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Dawn Raid Lambda</h3>
+                    <p>AWS Lambda function for synchronizing location data between systems.</p>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Personal Website</h3>
+                    <p>Interactive personal profile website with modern features.</p>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Sync System</h3>
+                    <p>Robust system for managing and synchronizing enterprise data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="documents" class="scroll-reveal">
+            <h2>Documents</h2>
+            <div class="documents-grid">
+                <div class="document-card">
+                    <div class="pdf-container">
+                        <!-- Replace 'your-pdf-file.pdf' with your actual PDF file name -->
+                        <embed src="assets/pdfs/your-pdf-file.pdf" type="application/pdf" width="100%" height="600px" />
+                    </div>
+                    <div class="document-actions">
+                        <a href="assets/pdfs/your-pdf-file.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="assets/pdfs/your-pdf-file.pdf" target="_blank" class="view-btn">
+                            <i class="fas fa-external-link-alt"></i> Open in New Tab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <section id="contact" class="scroll-reveal">
+            <h2>Contact Me</h2>
+        <div class="contact-grid">
+            <div class="contact-card" onclick="toggleContactInfo(this, 'email')">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-info hidden">nathanokubazgi@gmail.com</span>
+                <span class="contact-label"><i class="fas fa-eye"></i></span>
+            </div>
+            <div class="contact-card" onclick="toggleContactInfo(this, 'phone')">
+                <i class="fas fa-phone"></i>
+                <span class="contact-info hidden">615-853-7753</span>
+                <span class="contact-label"><i class="fas fa-eye"></i></span>
+            </div>
+            <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/nathanokubazgi', '_blank')">
+                <i class="fab fa-linkedin"></i>
+                <span>View LinkedIn Profile</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Nathan Okubazgi. All rights reserved.</p>
+    </footer>
+
+    <!-- Particle effect container -->
+    <div id="particles-js"></div>
+    
+    <!-- Tech background elements -->
+    <div class="tech-background">
+        <div class="circuit-lines"></div>
+        <div class="floating-icons">
+            <i class="fas fa-microchip"></i>
+            <i class="fas fa-code"></i>
+            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-server"></i>
+            <i class="fas fa-database"></i>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
